@@ -1,0 +1,31 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="title">Listar Produto</ui:define>
+
+    <ui:define name="content">
+        <div class="p-grid">
+            <div class="p-col">
+                <div class="card">
+                    <h4>Produtos</h4>
+                    <h:form id="form">
+                        <p:toolbar styleClass="p-mb-4">
+                            <p:toolbarGroup>
+                                <p:commandButton value="Novo Produto" icon="pi pi-plus" oncomplete="PF('manageProductDialog').show()"
+                                                 style="margin-right: .5rem">
+                                    
+                                </p:commandButton>
+                            </p:toolbarGroup>
+                        </p:toolbar>
+                        
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+
+</ui:composition>

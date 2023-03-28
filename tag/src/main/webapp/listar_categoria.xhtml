@@ -1,0 +1,81 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="title">Listar Categoria</ui:define>
+
+    <ui:define name="content">
+        <h:form id="form">
+            <p:growl id="mensagem" />
+            <div class="p-grid">
+                <div class="p-col">
+                    <div class="card">
+                        <h4>Lista de Categoria</h4>
+
+                        <p:toolbar styleClass="p-mb-4">
+                            <p:toolbarGroup>
+                                <p:commandButton value="Novo Categoria" icon="pi pi-plus" oncomplete="PF('manageProductDialog').show()"
+                                                 style="margin-right: .5rem">
+
+                                </p:commandButton>
+                            </p:toolbarGroup>
+                        </p:toolbar>
+
+
+
+                        <p:dataTable value="#{categoryView.listCategory}" style="width: 50%"
+                                     var="category" id="tblStudent" emptyMessage="Sem registos" paginator="true"
+                                     paginatorTemplate=" {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}">
+
+                            <p:column headerText="ID" >
+                                <p:outputLabel value="#{category.id}"/>
+                            </p:column>
+
+                            <p:column headerText="Name">
+                                <p:outputLabel value="#{category.name}"/>
+                            </p:column>
+                            <p:column headerText="Editar" style="width: 24px"  >
+                                <p:commandButton icon="pi pi-pencil"/>
+                            </p:column>
+
+                            <p:column headerText="Remover" >
+                                <p:commandButton icon="pi pi-trash"/>
+                            </p:column>
+
+                        </p:dataTable>
+
+                        <p:dialog header="Inserir Categoria" showEffect="fade" modal="true" widgetVar="manageProductDialog" responsive="true">
+                            <p:outputPanel id="manage-product-content" class="ui-fluid">
+                                <p:outputPanel>
+
+
+                                    <div class="p-formgrid p-grid">
+                                        <div class="p-field p-col">
+                                            <p:outputLabel for="category">Nome da Categoria</p:outputLabel>
+                                            <p:inputText id="category" value="#{categoryView.category.name}" required="true" />  
+                                        </div>
+                                    </div>
+                                </p:outputPanel>
+                            </p:outputPanel>
+
+                            <f:facet name="footer">
+                                 <p:commandButton value="Cancelar" icon="pi pi-times" onclick="PF('manageProductDialog').hide()" class="ui-button-warning" />
+                                    <p:commandButton value="Salvar" 
+                                             process="manage-product-content @this"
+                                             update="tblStudent :form:mensagem manage-product-content"
+                                             actionListener="#{categoryView.save()}" />
+                               
+                            </f:facet>
+                        </p:dialog> 
+
+
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </ui:define>
+
+</ui:composition>

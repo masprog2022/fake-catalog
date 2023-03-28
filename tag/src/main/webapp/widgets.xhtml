@@ -1,0 +1,406 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="title">Widgets</ui:define>
+
+    <ui:define name="content">
+        <h4>Reusable CSS widgets for your applications.</h4>
+
+        <div class="p-grid">
+            <div class="p-col-12">
+                <div class="card">
+                    <h4>Overview Boxes</h4>
+                    <div class="p-grid">
+                        <div class="p-col-12 p-lg-6 p-xl-3">
+                            <div class="widget-overview-box overview-box-1">
+                                <div class="overview-box-icon">
+                                    <i class="pi pi-inbox"/>
+                                </div>
+                                <div class="overview-box-content">
+                                    <div class="overview-box-title">Unread Messages</div>
+                                    <div class="overview-box-stats">150</div>
+                                    <div class="overview-box-details">+%50 more than yesterday</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-col-12 p-lg-6 p-xl-3">
+                            <div class="widget-overview-box overview-box-2">
+                                <div class="overview-box-icon">
+                                    <i class="pi pi-map-marker"/>
+                                </div>
+                                <div class="overview-box-content">
+                                    <div class="overview-box-title">Check-Ins</div>
+                                    <div class="overview-box-stats">532</div>
+                                    <div class="overview-box-details">+%75 more than yesterday</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-col-12 p-lg-6 p-xl-3">
+                            <div class="widget-overview-box overview-box-3">
+                                <div class="overview-box-icon">
+                                    <i class="pi pi-folder"/>
+                                </div>
+                                <div class="overview-box-content">
+                                    <div class="overview-box-title">Files Synced</div>
+                                    <div class="overview-box-stats">25</div>
+                                    <div class="overview-box-details">+%15 more than yesterday</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-col-12 p-lg-6 p-xl-3">
+                            <div class="widget-overview-box overview-box-4">
+                                <div class="overview-box-icon">
+                                    <i class="pi pi-user"/>
+                                </div>
+                                <div class="overview-box-content">
+                                    <div class="overview-box-title">Users Online</div>
+                                    <div class="overview-box-stats">156</div>
+                                    <div class="overview-box-details">-%20 less than last week</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-col-12 p-lg-4">
+                <div class="card widget-timeline ui-fluid">
+                    <div class="p-grid">
+                        <div class="p-col-3">
+                            <span class="event-time">just now</span>
+                            <i class="pi pi-map-marker" style="color:#3984b8"/>
+                        </div>
+                        <div class="p-col-9">
+                            <span class="event-owner" style="color:#3984b8">Katherine May</span>
+                            <span class="event-text">Lorem ipsun dolor amet</span>
+                            <div class="event-content">
+                                <p:graphicImage name="images/dashboard/bridge.png" library="manhattan-layout" width="100"/>
+                            </div>
+                        </div>
+
+                        <div class="p-col-3">
+                            <span class="event-time">12h ago</span>
+                            <i class="pi pi-star" style="color:#f6ac2b"/>
+                        </div>
+                        <div class="p-col-9">
+                            <span class="event-owner" style="color:#f6ac2b">Brandon Santos</span>
+                            <span class="event-text">Ab nobis, magnam sunt eum. Laudantium, repudiandae, similique!.</span>
+                        </div>
+
+                        <div class="p-col-3">
+                            <span class="event-time">15h ago</span>
+                            <i class="pi pi-comment" style="color:#7e8dcd"/>
+                        </div>
+                        <div class="p-col-9">
+                            <span class="event-owner" style="color:#7e8dcd">Stephan Ward</span>
+                            <span class="event-text">Omnis veniam quibusdam ratione est repellat qui nam quisquam ab mollitia dolores ullam voluptates, similique, dignissimos.</span>
+                        </div>
+
+                        <div class="p-col-3">
+                            <span class="event-time">2d ago</span>
+                            <i class="pi pi-globe" style="color:#e175a0"/>
+                        </div>
+                        <div class="p-col-9">
+                            <span class="event-owner" style="color:#e175a0">Jason Smith</span>
+                            <span class="event-text">Laudantium, repudiandae, similique!</span>
+                            <div class="event-content">
+                                <p:graphicImage name="images/dashboard/map.png" library="manhattan-layout"/>
+                            </div>
+                        </div>
+
+                        <div class="p-col-3">
+                            <span class="event-time">1w ago</span>
+                            <i class="pi pi-heart" style="color:#39b8b6"/>
+                        </div>
+                        <div class="p-col-9">
+                            <span class="event-owner">Kevin Cox</span>
+                            <span class="event-text">Quibusdam ratione est repellat qui nam quisquam veniam quibusdam ratione.</span>
+                        </div>
+
+                        <div class="p-col-3">
+                            <span class="event-time">2w ago</span>
+                            <i class="pi pi-compass" style="color:#3eb839"/>
+                        </div>
+                        <div class="p-col-9">
+                            <span class="event-owner" style="color:#3eb839">Walter White</span>
+                            <span class="event-text">I am the one who knocks!</span>
+                        </div>
+
+                        <div class="p-col-12">
+                            <p:commandButton type="button" value="Refresh" icon="pi pi-refresh"
+                                             styleClass="ui-button-raised rounded-button"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-col-12 p-lg-8">
+                <div class="p-grid">
+                    <div class="p-col-12 p-lg-6">
+                        <div class="widget-contacts card">
+                            <h4>Contacts</h4>
+                            <ul>
+                                <li class="clearfix">
+                                    <p:graphicImage name="images/avatar.png" library="manhattan-layout" width="45"/>
+                                    <div class="contact-info">
+                                        <span class="name">Madison Hughes (me)</span>
+                                        <span class="location">madison@pf-manhattan.com</span>
+                                    </div>
+                                    <div class="contact-actions">
+                                        <span class="connection-status online">online</span>
+                                        <i class="pi pi-comment"/>
+                                        <i class="pi pi-reply"/>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <p:graphicImage name="images/avatar1.png" library="manhattan-layout" width="45"/>
+                                    <div class="contact-info">
+                                        <span class="name">Joshua Williams</span>
+                                        <span class="location">joshua@pf-manhattan.com</span>
+                                    </div>
+                                    <div class="contact-actions">
+                                        <span class="connection-status online">online</span>
+                                        <i class="pi pi-comment"/>
+                                        <i class="pi pi-reply"/>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <p:graphicImage name="images/avatar2.png" library="manhattan-layout" width="45"/>
+                                    <div class="contact-info">
+                                        <span class="name">Emily Clark</span>
+                                        <span class="location">emily@pf-manhattan.com</span>
+                                    </div>
+                                    <div class="contact-actions">
+                                        <span class="connection-status offline">offline</span>
+                                        <i class="pi pi-comment"/>
+                                        <i class="pi pi-reply"/>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <p:graphicImage name="images/avatar3.png" library="manhattan-layout" width="45"/>
+                                    <div class="contact-info">
+                                        <span class="name">Tim Johnson</span>
+                                        <span class="location">tim@pf-manhattan.com</span>
+                                    </div>
+                                    <div class="contact-actions">
+                                        <span class="connection-status online">online</span>
+                                        <i class="pi pi-comment"/>
+                                        <i class="pi pi-reply"/>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <p:graphicImage name="images/avatar4.png" library="manhattan-layout" width="45"/>
+                                    <div class="contact-info">
+                                        <span class="name">David Stark</span>
+                                        <span class="location">kelly@pf-manhattan.com</span>
+                                    </div>
+                                    <div class="contact-actions">
+                                        <span class="connection-status offline">offline</span>
+                                        <i class="pi pi-comment"/>
+                                        <i class="pi pi-reply"/>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="p-col-12 p-lg-6">
+                        <div class="widget-user-card">
+                            <div class="user-card-header">
+                                <p:graphicImage name="images/dashboard/usercard.png" library="manhattan-layout"/>
+                            </div>
+                            <div class="user-card-content">
+                                <p:graphicImage name="images/avatar.png" library="manhattan-layout"/>
+                                <p:commandButton id="user-button" type="button" icon="pi pi-plus"
+                                                 styleClass="ui-button-secondary"/>
+
+                                <p:menu overlay="true" trigger="user-button" my="left top" at="left bottom">
+                                    <p:menuitem value="Save" icon="pi pi-check" url="#"/>
+                                    <p:menuitem value="Update" icon="pi pi-refresh" url="#"/>
+                                    <p:menuitem value="Delete" icon="pi pi-trash" url="#"/>
+                                </p:menu>
+
+                                <div class="user-card-name">
+                                    <span>Madison Hughes</span>
+                                </div>
+
+                                <div class="user-detail">
+                                    <ul>
+                                        <li class="clearfix">
+                                            <i class="pi pi-fw pi-sliders-h"/>
+                                            <span class="project-title">Tasks</span>
+                                            <span class="project-detail">3 open</span>
+                                            <div class="project-progressbar">
+                                                <div class="project-progressbar-value" style="width: 50%"></div>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <i class="pi pi-fw pi-dollar"/>
+                                            <span class="project-title">Revenue</span>
+                                            <span class="project-detail">+20%</span>
+                                            <div class="project-progressbar">
+                                                <div class="project-progressbar-value" style="width: 20%"></div>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <i class="pi pi-fw pi-money-bill"/>
+                                            <span class="project-title">Payments</span>
+                                            <span class="project-detail">24 new</span>
+                                            <div class="project-progressbar">
+                                                <div class="project-progressbar-value" style="width: 65%"></div>
+                                            </div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <i class="pi pi-fw pi-users"/>
+                                            <span class="project-title">Clients</span>
+                                            <span class="project-detail">+80%</span>
+                                            <div class="project-progressbar">
+                                                <div class="project-progressbar-value" style="width: 80%"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-col-12">
+                        <div class="card">
+                            <h4>Chat</h4>
+                            <div class="widget-chat">
+                                <ul>
+                                    <li class="clearfix message-from">
+                                        <p:graphicImage name="images/avatar2.png" library="manhattan-layout"/>
+                                        <span>Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore.</span>
+                                    </li>
+                                    <li class="clearfix message-own">
+                                        <p:graphicImage name="images/avatar.png" library="manhattan-layout"/>
+                                        <span>Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage.</span>
+                                    </li>
+                                    <li class="clearfix message-from">
+                                        <p:graphicImage name="images/avatar2.png" library="manhattan-layout"/>
+                                        <span>Chillwave craft beer tote bag stumptown quinoa hashtag.</span>
+                                    </li>
+                                    <li class="clearfix message-own">
+                                        <p:graphicImage name="images/avatar.png" library="manhattan-layout"/>
+                                        <span>Dreamcatcher locavore iPhone chillwave, occupy trust fund slow-carb distillery art party narwhal.</span>
+                                    </li>
+                                    <li class="clearfix message-own">
+                                        <span>Sed ut perspiciatis unde omnis iste natus.</span>
+                                    </li>
+                                    <li class="clearfix message-from">
+                                        <p:graphicImage name="images/avatar2.png" library="manhattan-layout"/>
+                                        <span>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.</span>
+                                    </li>
+                                    <li class="clearfix message-own">
+                                        <p:graphicImage name="images/avatar.png" library="manhattan-layout"/>
+                                        <span>At vero eos et accusamus.</span>
+                                    </li>
+                                </ul>
+                                <div class="new-message">
+                                    <div class="message-attachment">
+                                        <i class="pi pi-paperclip"/>
+                                    </div>
+                                    <div class="message-input">
+                                        <p:inputText type="text" placeholder="Write a message" styleClass="ui-inputfield"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-col-12 p-lg-6">
+                <div class="card widget-global-sales">
+                    <h4>Global Sales by Region</h4>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th>Total Sales</th>
+                            <th>Change</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><p:graphicImage name="images/dashboard/flag-brazil.png" library="manhattan-layout" width="45"/></td>
+                            <td>BRAZIL</td>
+                            <td>4234</td>
+                            <td>35%</td>
+                            <td><i class="pi pi-arrow-up"/></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><p:graphicImage name="images/dashboard/flag-china.png" library="manhattan-layout" width="45"/></td>
+                            <td>CHINA</td>
+                            <td>3214</td>
+                            <td>25%</td>
+                            <td><i class="pi pi-arrow-up"/></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><p:graphicImage name="images/dashboard/flag-belgium.png" library="manhattan-layout" width="45"/></td>
+                            <td>BELGIUM</td>
+                            <td>2842</td>
+                            <td>28%</td>
+                            <td><i class="pi pi-arrow-down"/></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><p:graphicImage name="images/dashboard/flag-france.png" library="manhattan-layout" width="45"/></td>
+                            <td>FRANCE</td>
+                            <td>1942</td>
+                            <td>15%</td>
+                            <td><i class="pi pi-arrow-up"/></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><p:graphicImage name="images/dashboard/flag-uk.png" library="manhattan-layout" width="45"/></td>
+                            <td>UK</td>
+                            <td>1956</td>
+                            <td>25%</td>
+                            <td><i class="pi pi-arrow-up"/></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="p-col-12 p-lg-6">
+                <div class="card widget-stats">
+                    <h4>Statistics</h4>
+                    <div class="knob-1 knob">
+                        <div class="knob-2 knob">
+                            <div class="knob-3 knob"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-grid legend">
+                        <div class="p-col-12 p-md-4 idle">
+                            <div class="legend-color"></div>
+                            <div class="legend-name">Idle</div>
+                            <div class="legend-number">43242</div>
+                        </div>
+                        <div class="p-col-12 p-md-4 pending">
+                            <div class="legend-color"></div>
+                            <div class="legend-name">Pending</div>
+                            <div class="legend-number">6345</div>
+                        </div>
+                        <div class="p-col-12 p-md-4 completed">
+                            <div class="legend-color"></div>
+                            <div class="legend-name">Completed</div>
+                            <div class="legend-number">4626</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+
+</ui:composition>
