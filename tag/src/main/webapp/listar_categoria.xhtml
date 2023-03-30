@@ -9,7 +9,7 @@
 
     <ui:define name="content">
         <h:form id="form">
-            <p:growl id="mensagem" />
+            <p:growl id="mensagem"  />
             <div class="p-grid">
                 <div class="p-col">
                     <div class="card">
@@ -27,7 +27,7 @@
 
 
                         <p:dataTable value="#{categoryView.listCategory}" style="width: 50%"
-                                     var="category" id="tblStudent" emptyMessage="Sem registos" paginator="true"
+                                     var="category" id="tblStudent" emptyMessage="Sem registos" paginator="true" rows="5"
                                      paginatorTemplate=" {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}">
 
                             <p:column headerText="ID" >
@@ -50,8 +50,6 @@
                         <p:dialog header="Inserir Categoria" showEffect="fade" modal="true" widgetVar="manageProductDialog" responsive="true">
                             <p:outputPanel id="manage-product-content" class="ui-fluid">
                                 <p:outputPanel>
-
-
                                     <div class="p-formgrid p-grid">
                                         <div class="p-field p-col">
                                             <p:outputLabel for="category">Nome da Categoria</p:outputLabel>
@@ -66,7 +64,8 @@
                                     <p:commandButton value="Salvar" 
                                              process="manage-product-content @this"
                                              update="tblStudent :form:mensagem manage-product-content"
-                                             actionListener="#{categoryView.save()}" />
+                                             actionListener="#{categoryView.saveCategory()}"
+                                             onclick="PF('manageProductDialog').hide()"/>
                                
                             </f:facet>
                         </p:dialog> 

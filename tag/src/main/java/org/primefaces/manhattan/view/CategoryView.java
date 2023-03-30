@@ -33,8 +33,13 @@ public class CategoryView implements Serializable {
     
     private List<Category> listCategory = new ArrayList<>();
     
-    private Category category = new Category();
-
+    
+    Category category = new Category();
+    
+    private String teste;
+    
+    
+    
     @PostConstruct
     private void start() {
         
@@ -42,8 +47,14 @@ public class CategoryView implements Serializable {
         
         listCategory = service.getListCategory();
       
-       
+    
     }
     
+  public void saveCategory() {
+      service.save();
+  }
+    
+  
+  
         
 }

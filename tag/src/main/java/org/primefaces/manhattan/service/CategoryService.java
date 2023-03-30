@@ -31,26 +31,32 @@ import org.primefaces.manhattan.util.ApacheHttpClient;
 public class CategoryService implements Serializable {
 
     List<Category> listCategory = new ArrayList<>();
+    
+    Category category = new Category();
 
-    private Category category = new Category();
 
     public void save() {
 
         Gson gson = new GsonBuilder().disableHtmlEscaping().create();
 
-        String url = "localhost:8090/categories";
+       String url = "http://localhost:8090/categories";
+       
+
 
         try {
+            
             System.out.println("gson.toJson(category): " + gson.toJson(category));
+            
+             //System.out.println("gson.toJson(category): " + gson.toJson(category));
 
             String resusltado = ApacheHttpClient.postRESTAPI(url, gson.toJson(category)).toString();
 
             System.out.println("resusltado: \n" + resusltado);
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Salvou: " + resusltado));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Categoria Salva com sucesso!"));
 
             listarCategory();
 
-            category = new Category();
+            ///category = new Category();
 
         } catch (Exception e) {
         }
