@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
+import javax.inject.Named;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -28,6 +30,8 @@ import org.primefaces.manhattan.util.ApacheHttpClient;
 @Getter
 @Setter
 @NoArgsConstructor
+@Named
+@ViewScoped
 public class CategoryService implements Serializable {
 
     List<Category> listCategory = new ArrayList<>();
@@ -35,9 +39,11 @@ public class CategoryService implements Serializable {
     Category category = new Category();
 
 
-    public void save() {
+    public void save(Category category) {
 
         Gson gson = new GsonBuilder().disableHtmlEscaping().create();
+        
+        // Gson g = new Gson();
 
        String url = "http://localhost:8090/categories";
        
@@ -45,7 +51,7 @@ public class CategoryService implements Serializable {
 
         try {
             
-            System.out.println("gson.toJson(category): " + gson.toJson(category));
+            System.out.println("Dados Convertidos : " + gson.toJson(category));
             
              //System.out.println("gson.toJson(category): " + gson.toJson(category));
 

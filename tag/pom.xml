@@ -9,6 +9,7 @@
 
     <name>dscatalog</name>
 
+   
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <owb.version>2.0.20</owb.version>
@@ -62,14 +63,7 @@
             <artifactId>geronimo-annotation_1.3_spec</artifactId>
             <version>1.0</version>
         </dependency>
-        
-        <dependency>
-            <groupId>com.googlecode.slf4j-maven-plugin-log</groupId>
-            <artifactId>slf4j-maven-plugin-log</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-  
-    
+
         <!-- CDI Impl -->
         <dependency>
             <groupId>org.apache.openwebbeans</groupId>
@@ -105,8 +99,6 @@
             <artifactId>json</artifactId>
             <version>20180813</version>
         </dependency>
-        
-        
 
         <!-- Export Demo Impl -->
         <dependency>

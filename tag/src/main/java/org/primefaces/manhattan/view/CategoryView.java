@@ -51,7 +51,10 @@ public class CategoryView implements Serializable {
     }
     
   public void saveCategory() {
-      service.save();
+      
+      System.out.println("dado para validar: " + teste);
+      category.setName(teste);
+      service.save(category);
   }
     
   
