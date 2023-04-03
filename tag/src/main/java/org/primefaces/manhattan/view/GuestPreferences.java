@@ -30,7 +30,7 @@ public class GuestPreferences implements Serializable {
 
     private String layoutMode = "layout-slim";
 
-    private String menuColor = "light";
+    private String menuColor = "dark";
 
     private String inputStyle = "outlined";
 
