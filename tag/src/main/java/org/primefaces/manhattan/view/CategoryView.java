@@ -36,7 +36,7 @@ public class CategoryView implements Serializable {
     
     Category category = new Category();
     
-    private String teste;
+    private String name;
     
     
     
@@ -52,8 +52,8 @@ public class CategoryView implements Serializable {
     
   public void saveCategory() {
       
-      System.out.println("dado para validar: " + teste);
-      category.setName(teste);
+      System.out.println("dado para validar: " + name);
+      category.setName(name);
       service.save(category);
   }
     
