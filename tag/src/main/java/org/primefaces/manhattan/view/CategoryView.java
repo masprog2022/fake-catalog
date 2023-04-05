@@ -4,10 +4,13 @@
  */
 package org.primefaces.manhattan.view;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import lombok.Getter;
@@ -40,6 +43,8 @@ public class CategoryView implements Serializable {
     
     
     
+    
+    
     @PostConstruct
     private void start() {
         
@@ -55,6 +60,12 @@ public class CategoryView implements Serializable {
       System.out.println("dado para validar: " + teste);
       category.setName(teste);
       service.save(category);
+  }
+  
+  public void DeleteCategory(Category category) throws IOException{
+      service.DeleteCategory(category);
+    
+      
   }
     
   

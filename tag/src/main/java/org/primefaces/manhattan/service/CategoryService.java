@@ -10,6 +10,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,9 @@ import javax.inject.Named;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpDelete;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.primefaces.manhattan.domain.Category;
 import org.primefaces.manhattan.util.ApacheHttpClient;
 
@@ -58,7 +62,7 @@ public class CategoryService implements Serializable {
             String resusltado = ApacheHttpClient.postRESTAPI(url, gson.toJson(category)).toString();
 
             System.out.println("resusltado: \n" + resusltado);
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Categoria Salva com sucesso!"));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Categoria Salva com sucesso!" ));
 
             listarCategory();
 
@@ -97,6 +101,17 @@ public class CategoryService implements Serializable {
 
         } catch (Exception e) {
         }
+    }
+    
+   
+    public void DeleteCategory(Category category) throws IOException{
+        HttpClient client = HttpClientBuilder.create().build();
+        
+         HttpDelete request = new HttpDelete("http://localhost:8090/categories/"+category.getId());
+         System.out.println("dados a remover"+request);
+         client.execute(request);
+         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Categoria Removida com sucesso: " + category));
+           listarCategory();
     }
     
 

@@ -42,7 +42,9 @@
                             </p:column>
 
                             <p:column headerText="Remover" >
-                                <p:commandButton icon="pi pi-trash"/>
+                                <p:commandButton icon="pi pi-trash"
+                                                 update="tblStudent form:mensagem @this"
+                                                 actionListener="#{categoryView.DeleteCategory(category)}"/>
                             </p:column>
 
                         </p:dataTable>
@@ -53,20 +55,20 @@
                                     <div class="p-formgrid p-grid">
                                         <div class="p-field p-col">
                                             <p:outputLabel for="category">Nome da Categoria</p:outputLabel>
-                                            <p:inputText id="category" value="#{categoryView.teste}" required="true" />  
+                                            <p:inputText id="category" value="#{categoryView.teste}" />  
                                         </div>
                                     </div>
                                 </p:outputPanel>
                             </p:outputPanel>
 
                             <f:facet name="footer">
-                                 <p:commandButton value="Cancelar" icon="pi pi-times" onclick="PF('manageProductDialog').hide()" class="ui-button-warning" />
-                                    <p:commandButton value="Salvar" 
-                                             process="manage-product-content @this"
-                                             update="tblStudent :form:mensagem manage-product-content"
-                                             actionListener="#{categoryView.saveCategory()}"
-                                             onclick="PF('manageProductDialog').hide()"/>
-                               
+                                <p:commandButton value="Cancelar" icon="pi pi-times" onclick="PF('manageProductDialog').hide()" class="ui-button-warning" />
+                                <p:commandButton value="Salvar" 
+                                                 process="manage-product-content @this"
+                                                 update="tblStudent :form:mensagem manage-product-content"
+                                                 actionListener="#{categoryView.saveCategory()}"
+                                                 onclick="PF('manageProductDialog').hide()"/>
+
                             </f:facet>
                         </p:dialog> 
 
